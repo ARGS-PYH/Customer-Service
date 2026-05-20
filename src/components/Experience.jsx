@@ -63,7 +63,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" style={{ padding: '5rem 0' }}>
+    <section id="experience" style={{ padding: '2.5rem 0' }}>
       <div className="container">
         
         {/* Section Header */}
@@ -76,7 +76,7 @@ export default function Experience() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1.2fr 0.8fr',
-          gap: '4rem',
+          gap: '2.5rem',
           alignItems: 'start'
         }} className="experience-grid">
           
@@ -162,7 +162,7 @@ export default function Experience() {
           </div>
 
           {/* Right Column: Education & Development */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             
             {/* Education Timeline */}
             <div>
@@ -221,12 +221,18 @@ export default function Experience() {
               <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem' }}>
                   <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Project Management Certification</h4>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Professional development in executing operational work frameworks.</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>CIMP</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Certified in professional project management lifecycles, execution frameworks, and structural operations.</p>
+                </div>
+                <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem' }}>
+                  <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Data Analytics Certification</h4>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>Cisco Networking Academy</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Certified in processing, analyzing, and transforming complex datasets to drive operational intelligence.</p>
                 </div>
                 <div>
                   <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>ALX Software Engineering Program</h4>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>In Progress (Intensive track)</p>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Enrolled in advanced stack mastering: system engineering, shell scripting, scripting languages, database management, and professional project operations.</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>In Progress</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Enrolled in systems development and advanced engineering workflows.</p>
                 </div>
               </div>
             </div>

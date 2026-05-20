@@ -5,10 +5,9 @@ import avatarImg from '../assets/avatar.jpg';
 export default function Hero() {
   return (
     <section id="home" style={{
-      minHeight: '100vh',
+      padding: '90px 0 40px 0',
       display: 'flex',
       alignItems: 'center',
-      paddingTop: '80px',
       position: 'relative',
       overflow: 'hidden'
     }}>
@@ -42,27 +41,27 @@ export default function Hero() {
         animation: 'pulse-glow 6s infinite alternate-reverse'
       }} />
 
-      <div className="container" style={{
+      <div className="container hero-grid" style={{
         position: 'relative',
         zIndex: 10,
         display: 'grid',
         gridTemplateColumns: '1.2fr 0.8fr',
-        gap: '4rem',
+        gap: '2rem',
         alignItems: 'center'
-      }} className="hero-grid">
+      }}>
         
         {/* Left Content Side */}
-        <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           
           {/* Tagline Badge */}
           <div className="glass-panel" style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.6rem',
-            padding: '0.4rem 1rem',
+            padding: '0.35rem 0.9rem',
             borderRadius: '50px',
             width: 'fit-content',
-            fontSize: '0.85rem',
+            fontSize: '0.8rem',
             fontWeight: 600,
             color: 'var(--accent)',
             border: '1px solid var(--border-color)',
@@ -75,7 +74,7 @@ export default function Hero() {
           {/* Headline */}
           <h1 style={{
             fontFamily: 'var(--font-heading)',
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+            fontSize: 'clamp(2rem, 4vw, 3rem)',
             fontWeight: 800,
             lineHeight: 1.15,
             letterSpacing: '-0.02em'
@@ -85,10 +84,10 @@ export default function Hero() {
 
           {/* Subheading */}
           <p style={{
-            fontSize: 'clamp(1.1rem, 2vw, 1.25rem)',
+            fontSize: 'clamp(0.95rem, 1.8vw, 1.1rem)',
             color: 'var(--text-secondary)',
-            maxWidth: '620px',
-            lineHeight: 1.6
+            maxWidth: '560px',
+            lineHeight: 1.65
           }}>
             A customer-focused technology professional with 4+ years of expertise spanning Customer Support, Risk Operations, and Data Annotation. I bridge the gap between technical understanding and outstanding client experiences.
           </p>
@@ -96,9 +95,9 @@ export default function Hero() {
           {/* Actions */}
           <div style={{
             display: 'flex',
-            gap: '1rem',
+            gap: '0.75rem',
             flexWrap: 'wrap',
-            marginTop: '1rem'
+            marginTop: '0.5rem'
           }}>
             <a href="#projects" className="btn btn-primary">
               Explore Projects <ArrowRight size={18} />
@@ -112,22 +111,22 @@ export default function Hero() {
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1.5rem',
-            marginTop: '2.5rem',
-            paddingTop: '2rem',
+            gap: '1.25rem',
+            marginTop: '1rem',
+            paddingTop: '1rem',
             borderTop: '1px solid var(--border-color)'
           }} className="hero-stats">
             <div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', fontWeight: 700, color: 'var(--accent)' }}>4+</h3>
-              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Years Experience</p>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--accent)' }}>4+</h3>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Years Experience</p>
             </div>
             <div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', fontWeight: 700, color: 'var(--accent)' }}>90%</h3>
-              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Customer Resolution Rate</p>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--accent)' }}>90%</h3>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Customer Resolution Rate</p>
             </div>
             <div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', fontWeight: 700, color: 'var(--accent)' }}>7+</h3>
-              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>AI Data Annotations</p>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--accent)' }}>7+</h3>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>AI Data Annotations</p>
             </div>
           </div>
 

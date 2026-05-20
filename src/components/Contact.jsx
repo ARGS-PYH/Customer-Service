@@ -82,7 +82,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" style={{ padding: '5rem 0' }}>
+    <section id="contact" style={{ padding: '2.5rem 0' }}>
       <div className="container">
         
         {/* Section Header */}
@@ -95,7 +95,7 @@ export default function Contact() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: '0.9fr 1.1fr',
-          gap: '4rem',
+          gap: '2.5rem',
           alignItems: 'start'
         }} className="contact-grid">
           
@@ -106,8 +106,8 @@ export default function Contact() {
               <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 700 }}>
                 Let's Build Something Exceptional
               </h3>
-              <p style={{ color: 'var(--text-secondary)' }}>
-                I am actively interested in **Customer Support**, **FinTech Operations**, and **Technical Service** roles within forward-thinking technology environments. 
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+                I am actively interested in Customer Support, FinTech Operations, and Technical Service roles within forward-thinking technology environments. 
               </p>
               <p style={{ color: 'var(--text-secondary)' }}>
                 If you are looking for an analytical team member who learns fast, operates independently, and executes with precision—get in touch!

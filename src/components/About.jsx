@@ -44,7 +44,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" style={{ padding: '5rem 0', background: 'var(--bg-secondary)' }}>
+    <section id="about" style={{ padding: '2.5rem 0', background: 'var(--bg-secondary)' }}>
       <div className="container">
         
         {/* Section Title */}
@@ -57,29 +57,29 @@ export default function About() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1.1fr 0.9fr',
-          gap: '4rem',
+          gap: '2rem',
           alignItems: 'start',
-          marginBottom: '4rem'
+          marginBottom: '2rem'
         }} className="about-grid">
           
           {/* Biography */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 600 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 600 }}>
               Bridging Technical Adaptability & Direct Operations
             </h3>
-            <p style={{ color: 'var(--text-secondary)' }}>
-              I am a Customer Success and Operations professional with a strong computer science background and an active enrollment in the highly rigorous ALX Software Engineering Program. This training equips me with critical problem-solving paradigms that I directly apply to operations.
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
+              I am a Customer Success and Operations professional with a strong computer science background, certified in Data Analytics from Cisco Networking Academy and in Project Management from CIMP. These credentials, paired with my active enrollment in the ALX Software Engineering Program, equip me with analytical frameworks that I directly apply to operations.
             </p>
-            <p style={{ color: 'var(--text-secondary)' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
               Whether analyzing daily risk vectors in commercial banking databases, managing complex support tickets at scale, or providing training data for large-scale AI/ML models, I deliver precision, speed, and clear communication.
             </p>
-            <p style={{ color: 'var(--text-secondary)' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
               I thrive in autonomous, remote environments that value fast-paced learning and strict attention to detail.
             </p>
           </div>
 
           {/* Core Values / Professional Qualities Card */}
-          <div className="glass-panel" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className="glass-panel" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 700 }}>
               Professional Pillars
             </h4>
@@ -117,9 +117,9 @@ export default function About() {
         {/* Skills Section Title */}
         <h3 style={{
           fontFamily: 'var(--font-heading)',
-          fontSize: '1.75rem',
+          fontSize: '1.5rem',
           textAlign: 'center',
-          marginBottom: '2rem',
+          marginBottom: '1.5rem',
           fontWeight: 700
         }}>
           Skills Matrix
@@ -129,8 +129,8 @@ export default function About() {
         <div style={{
           display: 'flex',
           justifyContent: 'center',
-          gap: '1rem',
-          marginBottom: '2.5rem',
+          gap: '0.75rem',
+          marginBottom: '1.75rem',
           flexWrap: 'wrap'
         }}>
           {Object.entries(skillsData).map(([key, value]) => (
@@ -159,7 +159,7 @@ export default function About() {
         </div>
 
         {/* Skills Display Grid */}
-        <div className="glass-panel" style={{ padding: '2.5rem' }}>
+        <div className="glass-panel" style={{ padding: '2rem' }}>
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',

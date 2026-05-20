@@ -79,9 +79,9 @@ body {
 
 /* Global Layout Utilities */
 .container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
 }
 
 .gradient-text {
@@ -182,8 +182,8 @@ body {
 .timeline {
   position: relative;
   max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
+  margin: 1.5rem auto;
+  padding: 0.75rem;
 }
 
 .timeline::before {
@@ -271,12 +271,12 @@ body {
 /* Section Header */
 .section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .section-header h2 {
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
@@ -331,7 +331,7 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
   }
   
   .timeline::before {

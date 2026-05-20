@@ -74,7 +74,7 @@ function App() {
       <footer style={{
         background: 'var(--bg-secondary)',
         borderTop: '1px solid var(--border-color)',
-        padding: '4rem 0 2rem 0',
+        padding: '2.5rem 0 1.5rem 0',
         position: 'relative',
         zIndex: 10
       }}>

@@ -61,7 +61,7 @@ export default function Projects() {
     : projectsData.filter(p => p.category === filter);
 
   return (
-    <section id="projects" style={{ padding: '5rem 0', background: 'var(--bg-secondary)' }}>
+    <section id="projects" style={{ padding: '2.5rem 0', background: 'var(--bg-secondary)' }}>
       <div className="container">
         
         {/* Section Header */}
@@ -75,7 +75,7 @@ export default function Projects() {
           display: 'flex',
           justifyContent: 'center',
           gap: '0.75rem',
-          marginBottom: '3rem',
+          marginBottom: '2rem',
           flexWrap: 'wrap'
         }}>
           {['all', 'ai', 'engineering', 'ops'].map((cat) => (
