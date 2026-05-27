@@ -72,12 +72,22 @@ export default function Contact() {
     if (validate()) {
       setIsSubmitting(true);
       
-      // Simulate API submit delay
+      // Build mailto link with form data
+      const mailtoSubject = encodeURIComponent(formData.subject);
+      const mailtoBody = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+      );
+      const mailtoLink = `mailto:daanimasaun@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+      
+      // Open the user's email client
+      window.location.href = mailtoLink;
+      
+      // Show success state after a brief delay
       setTimeout(() => {
         setIsSubmitting(false);
         setIsSubmitted(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
-      }, 1500);
+      }, 800);
     }
   };
 
@@ -187,10 +197,10 @@ export default function Contact() {
 
             {/* Social Icons Links */}
             <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.6rem 1rem' }}>
+              <a href="https://www.linkedin.com/in/danimasaun/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.6rem 1rem' }}>
                 <LinkedinIcon size={18} /> LinkedIn
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.6rem 1rem' }}>
+              <a href="https://github.com/ARGS-PYH" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.6rem 1rem' }}>
                 <GithubIcon size={18} /> GitHub
               </a>
             </div>

@@ -155,10 +155,10 @@ function App() {
             </p>
             
             <div style={{ display: 'flex', gap: '1rem' }}>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', transition: 'var(--transition)' }} onMouseEnter={(e)=>e.target.style.color='var(--accent)'} onMouseLeave={(e)=>e.target.style.color='var(--text-muted)'}>
+              <a href="https://github.com/ARGS-PYH" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', transition: 'var(--transition)' }} onMouseEnter={(e)=>e.target.style.color='var(--accent)'} onMouseLeave={(e)=>e.target.style.color='var(--text-muted)'}>
                 <GithubIcon size={18} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', transition: 'var(--transition)' }} onMouseEnter={(e)=>e.target.style.color='var(--accent)'} onMouseLeave={(e)=>e.target.style.color='var(--text-muted)'}>
+              <a href="https://www.linkedin.com/in/danimasaun/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', transition: 'var(--transition)' }} onMouseEnter={(e)=>e.target.style.color='var(--accent)'} onMouseLeave={(e)=>e.target.style.color='var(--text-muted)'}>
                 <LinkedinIcon size={18} />
               </a>
             </div>

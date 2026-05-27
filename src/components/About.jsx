@@ -38,7 +38,7 @@ export default function About() {
         { name: 'Risk & Fraud Analysis', desc: 'Irregular transaction checks' },
         { name: 'Market & Web Research', desc: 'Comprehensive domain studies' },
         { name: 'Remote Work Master', desc: 'Asynchronous collaboration' },
-        { name: 'Continuous Upskilling', desc: 'ALX development track' }
+        { name: 'Continuous Upskilling', desc: 'Professional growth mindset' }
       ]
     }
   };
@@ -68,7 +68,7 @@ export default function About() {
               Bridging Technical Adaptability & Direct Operations
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-              I am a Customer Success and Operations professional with a strong computer science background, certified in Data Analytics from Cisco Networking Academy and in Project Management from CIMP. These credentials, paired with my active enrollment in the ALX Software Engineering Program, equip me with analytical frameworks that I directly apply to operations.
+              I am a Customer Success and Operations professional with a strong computer science background, certified in Data Analytics from Cisco Networking Academy and in Project Management from CIMP. Combined with my completed ALX Software Engineering training, I bring analytical frameworks that I directly apply to operations.
             </p>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
               Whether analyzing daily risk vectors in commercial banking databases, managing complex support tickets at scale, or providing training data for large-scale AI/ML models, I deliver precision, speed, and clear communication.

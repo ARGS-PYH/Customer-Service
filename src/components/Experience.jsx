@@ -231,8 +231,8 @@ export default function Experience() {
                 </div>
                 <div>
                   <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>ALX Software Engineering Program</h4>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>In Progress</p>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Enrolled in systems development and advanced engineering workflows.</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>Completed</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Full-stack systems training strengthening technical problem-solving, debugging, and automation skills applied to operations.</p>
                 </div>
               </div>
             </div>
