@@ -22,23 +22,19 @@ export default function About() {
       icon: <Code size={18} />,
       skills: [
         { name: 'Google Sheets', desc: 'Data formulas & pivots' },
-        { name: 'Microsoft Office', desc: 'Excel, Word & presentation' },
-        { name: 'Git & GitHub', desc: 'Version control workflows' },
-        { name: 'HTML5 & CSS3', desc: 'Responsive site frameworks' },
-        { name: 'JavaScript', desc: 'Dynamic interface rendering' },
-        { name: 'Computer Science Core', desc: 'Algorithms & logic bases' }
+        { name: 'Microsoft Office', desc: 'Excel, Word & presentation' }
       ]
     },
     operations: {
-      title: 'Operations & AI',
+      title: 'Operations & Analytics',
       icon: <Database size={18} />,
       skills: [
-        { name: 'Data Annotation', desc: 'High-quality ML training sets' },
+        { name: 'Data Entry & Auditing', desc: 'High-accuracy record management' },
         { name: 'Quality Review', desc: 'Error auditing & correction' },
         { name: 'Risk & Fraud Analysis', desc: 'Irregular transaction checks' },
         { name: 'Market & Web Research', desc: 'Comprehensive domain studies' },
         { name: 'Remote Work Master', desc: 'Asynchronous collaboration' },
-        { name: 'Continuous Upskilling', desc: 'Professional growth mindset' }
+        { name: 'Continuous Upskilling', desc: 'Professional foundation track' }
       ]
     }
   };
@@ -61,17 +57,17 @@ export default function About() {
           alignItems: 'start',
           marginBottom: '2rem'
         }} className="about-grid">
-          
+
           {/* Biography */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 600 }}>
               Bridging Technical Adaptability & Direct Operations
             </h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-              I am a Customer Success and Operations professional with a strong computer science background, certified in Data Analytics from Cisco Networking Academy and in Project Management from CIMP. Combined with my completed ALX Software Engineering training, I bring analytical frameworks that I directly apply to operations.
+              I am a Customer Success and Operations professional with a strong computer science background, certified in Data Analytics from Cisco Networking Academy and in Project Management from ICSMP. These credentials, paired with my completed Professional foundation program, equip me with analytical frameworks that I directly apply to operations.
             </p>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-              Whether analyzing daily risk vectors in commercial banking databases, managing complex support tickets at scale, or providing training data for large-scale AI/ML models, I deliver precision, speed, and clear communication.
+              Whether analyzing daily risk vectors in commercial banking databases or managing 80-90 support tickets daily at scale, I deliver precision, speed, and clear communication.
             </p>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
               I thrive in autonomous, remote environments that value fast-paced learning and strict attention to detail.
@@ -79,7 +75,7 @@ export default function About() {
           </div>
 
           {/* Core Values / Professional Qualities Card */}
-          <div className="glass-panel" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+          <div className="glass-panel" style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 700 }}>
               Professional Pillars
             </h4>
@@ -89,7 +85,7 @@ export default function About() {
                 <CheckCircle2 size={18} style={{ color: 'var(--accent)', marginTop: '2px', flexShrink: 0 }} />
                 <div>
                   <h5 style={{ fontWeight: 600, fontSize: '0.95rem' }}>Adaptable Technical Mindset</h5>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Proven ability to learn fresh domain knowledge rapidly—demonstrated across 7+ complex AI projects.</p>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Proven ability to learn fresh domain knowledge rapidly and resolve tickets efficiently.</p>
                 </div>
               </div>
 

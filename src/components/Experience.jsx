@@ -4,15 +4,15 @@ import { Calendar, Briefcase, GraduationCap, Award } from 'lucide-react';
 export default function Experience() {
   const experiences = [
     {
-      role: 'Data Annotation Specialist',
+      role: 'Customer Support & Operations Specialist',
       company: 'Freelance',
       period: '2023 – Present',
       type: 'remote',
       achievements: [
-        'Successfully completed 7 complex data annotation projects across text, audio, and image datasets, delivering 50-70 tasks per active work period.',
-        'Independently researched and mastered new subject domains for each project, ensuring extreme adaptability across diverse AI/ML training guidelines.',
-        'Maintained ultra-high accuracy and consistency standards across all deliverables, enforcing quality control on 100% of custom submissions.',
-        'Managed own workload remotely, meeting rigorous client deadlines across multiple concurrent annotation tasks.'
+        'Provided customer-facing and administrative support remotely, managing tasks independently to strict deadlines.',
+        'Reviewed and assessed written content with high accuracy, maintaining quality standards across all deliverables.',
+        'Communicated clearly with clients in writing, reporting issues and progress in a timely and professional manner.',
+        'Quickly adapted to new subject areas and tools for each project, demonstrating strong self-learning and flexibility.'
       ]
     },
     {
@@ -43,10 +43,10 @@ export default function Experience() {
 
   const educations = [
     {
-      degree: 'B.Sc. in Computer Science (In View)',
+      degree: 'B.Sc. Computer Science',
       institution: 'Federal University of Oye Ekiti',
-      period: 'Expected 2026',
-      details: 'Expected completion before end of 2026'
+      period: '2026',
+      details: 'Second Class Upper (Certificate Pending)'
     },
     {
       degree: 'Higher National Diploma',
@@ -221,7 +221,7 @@ export default function Experience() {
               <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem' }}>
                   <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Project Management Certification</h4>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>CIMP</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>ICSMP</p>
                   <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Certified in professional project management lifecycles, execution frameworks, and structural operations.</p>
                 </div>
                 <div style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem' }}>
@@ -230,9 +230,9 @@ export default function Experience() {
                   <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Certified in processing, analyzing, and transforming complex datasets to drive operational intelligence.</p>
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>ALX Software Engineering Program</h4>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>Completed</p>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Full-stack systems training strengthening technical problem-solving, debugging, and automation skills applied to operations.</p>
+                  <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Professional Foundation Program</h4>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--accent)', fontWeight: 500 }}>ALX &nbsp;|&nbsp; Completed</p>
+                  <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>Completed professional foundation and systems development training at ALX.</p>
                 </div>
               </div>
             </div>

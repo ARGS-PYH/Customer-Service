@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mail, Briefcase } from 'lucide-react';
+import { ArrowRight, Mail, Briefcase, Download } from 'lucide-react';
 import avatarImg from '../assets/avatar.jpg';
 
 export default function Hero() {
@@ -68,7 +68,7 @@ export default function Hero() {
             background: 'var(--bg-card)'
           }}>
             <Briefcase size={14} />
-            <span>Customer Operations Specialist</span>
+            <span>Customer Service Representative</span>
           </div>
 
           {/* Headline */}
@@ -89,7 +89,7 @@ export default function Hero() {
             maxWidth: '560px',
             lineHeight: 1.65
           }}>
-            A customer-focused technology professional with 4+ years of expertise spanning Customer Support, Risk Operations, and Data Annotation. I bridge the gap between technical understanding and outstanding client experiences.
+            A customer-focused technology professional with 4+ years of expertise in high-volume banking, complaint resolution, and remote operations. Dedicated to delivering exceptional customer support.
           </p>
 
           {/* Actions */}
@@ -104,6 +104,9 @@ export default function Hero() {
             </a>
             <a href="#contact" className="btn btn-secondary">
               Let's Connect <Mail size={18} />
+            </a>
+            <a href="/Damilare_Animasaun_CV.pdf" download="Damilare_Animasaun_CV.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>
+              Download CV <Download size={18} />
             </a>
           </div>
 
@@ -121,12 +124,12 @@ export default function Hero() {
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Years Experience</p>
             </div>
             <div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--accent)' }}>90%</h3>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Customer Resolution Rate</p>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--accent)' }}>80-90</h3>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Daily Customer Tickets</p>
             </div>
             <div>
-              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--accent)' }}>7+</h3>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>AI Data Annotations</p>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--accent)' }}>4+</h3>
+              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Years Customer Support</p>
             </div>
           </div>
 

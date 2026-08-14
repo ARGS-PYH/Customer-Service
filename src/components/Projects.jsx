@@ -7,42 +7,6 @@ export default function Projects() {
 
   const projectsData = [
     {
-      id: 1,
-      title: 'AI Image Segmentation & Object Boundaries',
-      category: 'ai',
-      categoryLabel: 'AI & Data Annotation',
-      brief: 'Large-scale image labeling and segmentation for autonomous vehicle training models.',
-      tech: ['Computer Vision', 'Image Labeling', 'Quality Audit', 'Data Security'],
-      icon: <Layers size={20} />,
-      problem: 'The AI model was struggling with recognizing complex edge boundaries in night-time driving datasets, causing edge-case navigation errors.',
-      approach: 'Independently researched autonomous driving segmentation guidelines. Handled 50-70 dense boundary masking tasks per session, leveraging extreme precision for overlapping objects and reflection scenarios.',
-      results: 'Achieved a consistent 98.5% accuracy review score across 3 consecutive batches. Contributed crucial pixel-perfect training arrays that improved the model\'s edge detection capabilities by 12% in low-light conditions.'
-    },
-    {
-      id: 2,
-      title: 'NLP Conversational Intent Mapping',
-      category: 'ai',
-      categoryLabel: 'AI & Data Annotation',
-      brief: 'Annotation and entity parsing of 5000+ complex banking/fintech customer queries.',
-      tech: ['NLP', 'Entity Extraction', 'Intent Classification', 'Fintech'],
-      icon: <Database size={20} />,
-      problem: 'A fintech chatbot was misinterpreting support queries containing blended financial terminology (e.g. chargeback vs. refund).',
-      approach: 'Mapped customer support intents and tagged entities across banking queries. Leveraged banking experience from Ecobank to resolve semantic ambiguities in financial support text datasets.',
-      results: 'Parsed over 1,200 complex transactional queries with zero classification errors. Significantly reduced intent ambiguity, enabling the chatbot to automate customer routing for common transactional disputes.'
-    },
-    {
-      id: 3,
-      title: 'ALX Shell System Operations Suite',
-      category: 'engineering',
-      categoryLabel: 'Software Engineering',
-      brief: 'Automated systems administration tool suite designed during the ALX Software Engineering program.',
-      tech: ['Bash', 'Shell Scripting', 'C Language', 'Linux Systems'],
-      icon: <Terminal size={20} />,
-      problem: 'System administration tasks (resource checks, error log audits) required tedious, repetitive terminal inputs.',
-      approach: 'Constructed custom bash utility scripts to automate disk health monitoring, memory leaks, and CPU load reporting. Integrated error-logging mechanisms inside a lightweight C binary.',
-      results: 'Created a unified toolset that reduced standard server health diagnostics from 15 minutes of manual commands to a single 2-second command, improving remote work task workflows.'
-    },
-    {
       id: 4,
       title: 'Semi-Automated Transaction Risk Monitor',
       category: 'ops',
@@ -67,7 +31,7 @@ export default function Projects() {
         {/* Section Header */}
         <div className="section-header">
           <h2 className="gradient-text">Featured Work</h2>
-          <p>Practical demonstrations of technical excellence, data accuracy, and systems automation</p>
+          <p>Practical demonstrations of operational accuracy, risk monitoring, and systems workflow</p>
         </div>
 
         {/* Filter Navigation */}
@@ -78,7 +42,7 @@ export default function Projects() {
           marginBottom: '2rem',
           flexWrap: 'wrap'
         }}>
-          {['all', 'ai', 'engineering', 'ops'].map((cat) => (
+          {['all', 'ops'].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
@@ -96,7 +60,7 @@ export default function Projects() {
                 textTransform: 'capitalize'
               }}
             >
-              {cat === 'all' ? 'All Work' : cat === 'ai' ? 'AI & Annotation' : cat === 'ops' ? 'Risk Ops' : 'Software Engineering'}
+              {cat === 'all' ? 'All Work' : 'Risk & Operations'}
             </button>
           ))}
         </div>
