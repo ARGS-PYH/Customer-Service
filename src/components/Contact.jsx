@@ -187,10 +187,10 @@ export default function Contact() {
 
             {/* Social Icons Links */}
             <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.6rem 1rem' }}>
+              <a href="https://www.linkedin.com/in/danimasaun/" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.6rem 1rem' }}>
                 <LinkedinIcon size={18} /> LinkedIn
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.6rem 1rem' }}>
+              <a href="https://github.com/ARGS-PYH" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.6rem 1rem' }}>
                 <GithubIcon size={18} /> GitHub
               </a>
             </div>
