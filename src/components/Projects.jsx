@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, X, ShieldCheck, Users, FileSpreadsheet } from 'lucide-react';
+import { BookOpen, X, Users, FileSpreadsheet, Layers } from 'lucide-react';
 
 export default function Projects() {
   const [filter, setFilter] = useState('all');
