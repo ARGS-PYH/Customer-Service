@@ -20,24 +20,24 @@ export default function Projects() {
       scopeNote: 'Anonymised case study. Original company and product names, labels, and identifying details have been removed.'
     },
     {
-      id: 'risk-review',
-      title: 'Risk Review & Exception Tracking',
-      category: 'operations',
-      categoryLabel: 'Risk & Operations',
-      brief: 'A spreadsheet-led review framework for organising exception checks, documenting follow-up, and supporting structured risk reporting.',
-      tech: ['Excel', 'Google Sheets', 'Data Quality', 'Risk Tracking'],
-      icon: <ShieldCheck size={20} />,
-      problem: 'Manual review work can make it difficult to keep exceptions, follow-up actions, and decision notes organised consistently.',
-      approach: 'Structured the review concept around reference fields, exception flags, review status, and supporting notes so that checks and follow-up can be documented in a repeatable way. The portfolio description avoids live banking or customer data.',
-      deliverables: 'A clearer review structure for exception tracking and documentation. No quantified improvement in review speed, fraud prevention, or financial outcomes is claimed.',
-      scopeNote: 'Demonstration project description. No confidential customer or bank records are displayed.'
+      id: 'product-operations',
+      title: 'Digital Product Testing & Provider Onboarding',
+      category: 'product',
+      categoryLabel: 'Digital Product Operations',
+      brief: 'Practical work across product checks, user feedback, and service-provider onboarding for a digital services platform.',
+      tech: ['Product Testing', 'User Feedback', 'Onboarding', 'Operational Workflows'],
+      icon: <Layers size={20} />,
+      problem: 'A digital services platform needs clear feedback loops between users, providers, product checks, and day-to-day service operations.',
+      approach: 'Test product features, note issues encountered during hands-on use, engage with users to understand friction, support provider onboarding and verification, and contribute to workflows that help track and follow up on service issues.',
+      deliverables: 'Product observations, user feedback, onboarding support, and operational workflow contributions. No unsupported adoption, revenue, SEO, or customer-retention results are claimed.',
+      scopeNote: 'Based on responsibilities at Peregrine Solution. The description focuses on the type of work performed and does not disclose confidential product or customer information.'
     }
   ];
 
   const categories = [
     { key: 'all', label: 'All Work' },
     { key: 'success', label: 'Customer Success' },
-    { key: 'operations', label: 'Operations & Analysis' }
+    { key: 'product', label: 'Product Operations' }
   ];
 
   const filteredProjects = filter === 'all'
