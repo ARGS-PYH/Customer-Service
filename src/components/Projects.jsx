@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Eye, ExternalLink, X, BookOpen, Terminal, ShieldCheck, Database, Layers } from 'lucide-react';
+import { BookOpen, X, ShieldCheck, Users, FileSpreadsheet } from 'lucide-react';
 
 export default function Projects() {
   const [filter, setFilter] = useState('all');
@@ -7,282 +7,200 @@ export default function Projects() {
 
   const projectsData = [
     {
-      id: 4,
-      title: 'Semi-Automated Transaction Risk Monitor',
-      category: 'ops',
-      categoryLabel: 'Fintech & Risk Ops',
-      brief: 'Advanced tracking and analysis dashboard built to optimize daily compliance reviews.',
-      tech: ['Google Sheets', 'Excel Macros', 'Risk Formulas', 'Audit Reporting'],
+      id: 'customer-health',
+      title: 'Customer Health & Feedback Operations',
+      category: 'success',
+      categoryLabel: 'Customer Success & Operations',
+      brief: 'An anonymised, scenario-based case study connecting customer health signals, onboarding friction, and feedback to prioritised next steps.',
+      tech: ['Excel', 'Customer Health Review', 'Customer Communication', 'Feedback Tracking'],
+      icon: <Users size={20} />,
+      problem: 'A sample set of customer accounts needed a consistent way to distinguish healthy engagement from adoption risk and organise follow-up. The case study uses an illustrative dataset rather than real customer records.',
+      approach: 'Reviewed a 10-account sample and classified 5 as healthy, 2 for watch-list follow-up, and 3 as at risk. Prepared a prioritised 14-day action plan, tailored customer message templates, onboarding recommendations, and a feedback tracker for issue priority, ownership, response timelines, and recurring themes.',
+      deliverables: 'Customer health segmentation, a 14-day intervention plan, customer communications, onboarding recommendations, and a feedback tracking workbook. The recommendations are proposals from a scenario-based exercise; implementation and business impact were not measured.',
+      scopeNote: 'Anonymised case study. Original company and product names, labels, and identifying details have been removed.'
+    },
+    {
+      id: 'risk-review',
+      title: 'Risk Review & Exception Tracking',
+      category: 'operations',
+      categoryLabel: 'Risk & Operations',
+      brief: 'A spreadsheet-led review framework for organising exception checks, documenting follow-up, and supporting structured risk reporting.',
+      tech: ['Excel', 'Google Sheets', 'Data Quality', 'Risk Tracking'],
       icon: <ShieldCheck size={20} />,
-      problem: 'Auditing 30-40 daily multi-channel banking records manually was slow, making it difficult to flag critical risk exposures before daily settlements.',
-      approach: 'Designed spreadsheet dashboards utilizing automated validation rules, custom conditional logic, and macro triggers to instantly isolate transaction outliers and velocity threshold limits.',
-      results: 'Increased suspicious activity identification speed by 40%. Allowed operations teams to catch daily compliance errors within the same-day cycle, saving potential regulatory penalty exposures.'
+      problem: 'Manual review work can make it difficult to keep exceptions, follow-up actions, and decision notes organised consistently.',
+      approach: 'Structured the review concept around reference fields, exception flags, review status, and supporting notes so that checks and follow-up can be documented in a repeatable way. The portfolio description avoids live banking or customer data.',
+      deliverables: 'A clearer review structure for exception tracking and documentation. No quantified improvement in review speed, fraud prevention, or financial outcomes is claimed.',
+      scopeNote: 'Demonstration project description. No confidential customer or bank records are displayed.'
     }
   ];
 
-  const filteredProjects = filter === 'all' 
-    ? projectsData 
-    : projectsData.filter(p => p.category === filter);
+  const categories = [
+    { key: 'all', label: 'All Work' },
+    { key: 'success', label: 'Customer Success' },
+    { key: 'operations', label: 'Operations & Analysis' }
+  ];
+
+  const filteredProjects = filter === 'all'
+    ? projectsData
+    : projectsData.filter((project) => project.category === filter);
+
+  const closeProject = () => setSelectedProject(null);
 
   return (
-    <section id="projects" style={{ padding: '2.5rem 0', background: 'var(--bg-secondary)' }}>
+    <section id="projects" style={{ padding: '2.75rem 0', background: 'var(--bg-secondary)' }}>
       <div className="container">
-        
-        {/* Section Header */}
         <div className="section-header">
-          <h2 className="gradient-text">Featured Work</h2>
-          <p>Practical demonstrations of operational accuracy, risk monitoring, and systems workflow</p>
+          <h2 className="gradient-text">Selected Case Studies</h2>
+          <p>Practical examples of customer health analysis, feedback operations, and risk-aware workflows</p>
         </div>
 
-        {/* Filter Navigation */}
         <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '0.75rem',
-          marginBottom: '2rem',
-          flexWrap: 'wrap'
+          display: 'flex', justifyContent: 'center', gap: '0.75rem',
+          marginBottom: '2rem', flexWrap: 'wrap'
         }}>
-          {['all', 'ops'].map((cat) => (
+          {categories.map((category) => (
             <button
-              key={cat}
-              onClick={() => setFilter(cat)}
+              key={category.key}
+              type="button"
+              onClick={() => setFilter(category.key)}
+              aria-pressed={filter === category.key}
               style={{
-                padding: '0.6rem 1.25rem',
-                borderRadius: '10px',
-                border: '1px solid',
-                borderColor: filter === cat ? 'var(--accent)' : 'var(--border-color)',
-                background: filter === cat ? 'var(--accent)' : 'var(--bg-card)',
-                color: filter === cat ? 'white' : 'var(--text-secondary)',
-                fontWeight: 600,
-                fontSize: '0.85rem',
-                cursor: 'pointer',
-                transition: 'var(--transition)',
-                textTransform: 'capitalize'
+                padding: '0.65rem 1.1rem', borderRadius: '10px', border: '1px solid',
+                borderColor: filter === category.key ? 'var(--accent)' : 'var(--border-color)',
+                background: filter === category.key ? 'var(--accent)' : 'var(--bg-card)',
+                color: filter === category.key ? 'white' : 'var(--text-secondary)',
+                fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', transition: 'var(--transition)'
               }}
             >
-              {cat === 'all' ? 'All Work' : 'Risk & Operations'}
+              {category.label}
             </button>
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-          gap: '2rem'
-        }} className="projects-grid">
+        <div className="projects-grid" style={{
+          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 310px), 1fr))',
+          gap: '1.5rem', alignItems: 'stretch'
+        }}>
           {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="glass-panel"
-              style={{
-                padding: '2rem',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '1.25rem',
-                position: 'relative',
-                overflow: 'hidden'
-              }}
-            >
-              {/* Top Category Badge & Icon */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <article key={project.id} className="glass-panel" style={{
+              padding: '1.75rem', display: 'flex', flexDirection: 'column',
+              gap: '1rem', position: 'relative', overflow: 'hidden'
+            }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
                 <span style={{
-                  fontSize: '0.75rem',
-                  fontWeight: 600,
-                  color: 'var(--accent)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em'
-                }}>
-                  {project.categoryLabel}
-                </span>
-                <div style={{
-                  color: 'var(--text-muted)',
-                  background: 'rgba(255,255,255,0.02)',
-                  padding: '0.5rem',
-                  borderRadius: '8px',
-                  border: '1px solid var(--border-color)'
-                }}>
-                  {project.icon}
-                </div>
+                  fontSize: '0.72rem', fontWeight: 700, color: 'var(--accent)',
+                  textTransform: 'uppercase', letterSpacing: '0.05em'
+                }}>{project.categoryLabel}</span>
+                <div aria-hidden="true" style={{
+                  color: 'var(--text-muted)', background: 'rgba(255,255,255,0.02)',
+                  padding: '0.5rem', borderRadius: '8px', border: '1px solid var(--border-color)'
+                }}>{project.icon}</div>
               </div>
 
-              {/* Title */}
               <h3 style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: '1.25rem',
-                fontWeight: 700,
-                lineHeight: '1.3'
-              }}>
-                {project.title}
-              </h3>
+                fontFamily: 'var(--font-heading)', fontSize: '1.25rem',
+                fontWeight: 700, lineHeight: 1.3
+              }}>{project.title}</h3>
 
-              {/* Brief */}
-              <p style={{
-                fontSize: '0.9rem',
-                color: 'var(--text-secondary)',
-                flexGrow: 1,
-                lineHeight: '1.5'
-              }}>
+              <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', flexGrow: 1, lineHeight: 1.6 }}>
                 {project.brief}
               </p>
 
-              {/* Tech Tags */}
-              <div style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '0.5rem',
-                marginTop: '0.5rem'
-              }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem' }}>
                 {project.tech.map((tag) => (
-                  <span
-                    key={tag}
-                    style={{
-                      fontSize: '0.75rem',
-                      background: 'rgba(255, 255, 255, 0.03)',
-                      color: 'var(--text-secondary)',
-                      padding: '0.2rem 0.5rem',
-                      borderRadius: '6px',
-                      border: '1px solid var(--border-color)'
-                    }}
-                  >
-                    {tag}
-                  </span>
+                  <span key={tag} style={{
+                    fontSize: '0.74rem', background: 'rgba(255,255,255,0.03)',
+                    color: 'var(--text-secondary)', padding: '0.25rem 0.55rem',
+                    borderRadius: '6px', border: '1px solid var(--border-color)'
+                  }}>{tag}</span>
                 ))}
               </div>
 
-              {/* Action Button */}
               <button
+                type="button"
                 onClick={() => setSelectedProject(project)}
                 className="btn btn-secondary"
-                style={{
-                  width: '100%',
-                  justifyContent: 'center',
-                  padding: '0.6rem',
-                  fontSize: '0.85rem',
-                  marginTop: '0.75rem'
-                }}
+                style={{ width: '100%', justifyContent: 'center', padding: '0.7rem', fontSize: '0.87rem', marginTop: '0.25rem' }}
               >
                 <BookOpen size={16} /> View Case Study
               </button>
-
-            </div>
+            </article>
           ))}
         </div>
 
-        {/* Premium Case Study Modal Overlay */}
         {selectedProject && (
-          <div className="modal-overlay animate-fade-in" onClick={() => setSelectedProject(null)}>
+          <div className="modal-overlay animate-fade-in" onClick={closeProject}>
             <div
               className="glass-panel modal-content"
-              onClick={(e) => e.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="case-study-title"
+              onClick={(event) => event.stopPropagation()}
               style={{
-                background: 'var(--bg-secondary)',
-                border: '1px solid var(--border-color-hover)',
+                background: 'var(--bg-secondary)', border: '1px solid var(--border-color-hover)',
                 boxShadow: '0 20px 80px rgba(0, 242, 254, 0.15)'
               }}
             >
-              
-              {/* Close Button */}
-              <button className="modal-close" onClick={() => setSelectedProject(null)}>
+              <button className="modal-close" type="button" onClick={closeProject} aria-label="Close case study">
                 <X size={24} />
               </button>
 
-              {/* Header Info */}
               <span style={{
-                fontSize: '0.75rem',
-                color: 'var(--accent)',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em'
-              }}>
-                {selectedProject.categoryLabel}
-              </span>
-              
-              <h2 style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: '1.75rem',
-                fontWeight: 800,
-                marginTop: '0.5rem',
-                marginBottom: '1.25rem',
-                lineHeight: '1.25'
-              }}>
-                {selectedProject.title}
-              </h2>
+                fontSize: '0.72rem', color: 'var(--accent)', fontWeight: 700,
+                textTransform: 'uppercase', letterSpacing: '0.05em'
+              }}>{selectedProject.categoryLabel}</span>
 
-              {/* Detailed Breakdown */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '1.5rem' }}>
-                
-                {/* Problem */}
+              <h2 id="case-study-title" style={{
+                fontFamily: 'var(--font-heading)', fontSize: '1.65rem', fontWeight: 800,
+                marginTop: '0.5rem', marginBottom: '0.75rem', lineHeight: 1.25, paddingRight: '1.5rem'
+              }}>{selectedProject.title}</h2>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.25rem' }}>
+                {selectedProject.tech.map((tag) => (
+                  <span key={tag} style={{
+                    fontSize: '0.75rem', color: 'var(--text-secondary)', padding: '0.2rem 0.5rem',
+                    borderRadius: '6px', border: '1px solid var(--border-color)'
+                  }}>{tag}</span>
+                ))}
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div>
-                  <h4 style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '1rem',
-                    fontWeight: 700,
-                    color: 'var(--text-primary)',
-                    marginBottom: '0.4rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.4rem'
-                  }}>
-                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'hsl(350, 85%, 55%)' }}></span>
+                  <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, marginBottom: '0.4rem' }}>
                     The Challenge
                   </h4>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>
                     {selectedProject.problem}
                   </p>
                 </div>
-
-                {/* My Approach */}
                 <div>
-                  <h4 style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '1rem',
-                    fontWeight: 700,
-                    color: 'var(--text-primary)',
-                    marginBottom: '0.4rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.4rem'
-                  }}>
-                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent)' }}></span>
-                    My Solution & Approach
+                  <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700, marginBottom: '0.4rem' }}>
+                    My Approach
                   </h4>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.65 }}>
                     {selectedProject.approach}
                   </p>
                 </div>
-
-                {/* Key Results */}
                 <div style={{
-                  padding: '1.25rem',
-                  borderRadius: '12px',
-                  background: 'var(--glow)',
+                  padding: '1.1rem', borderRadius: '12px', background: 'var(--glow)',
                   border: '1px solid rgba(var(--accent-rgb), 0.15)'
                 }}>
                   <h4 style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '1rem',
-                    fontWeight: 700,
-                    color: 'var(--accent)',
-                    marginBottom: '0.4rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.4rem'
-                  }}>
-                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'hsl(140, 85%, 45%)' }}></span>
-                    Key Achievements & Results
-                  </h4>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 500, lineHeight: '1.5' }}>
-                    {selectedProject.results}
+                    fontFamily: 'var(--font-heading)', fontSize: '1rem', fontWeight: 700,
+                    color: 'var(--accent)', marginBottom: '0.4rem', display: 'flex',
+                    alignItems: 'center', gap: '0.4rem'
+                  }}><FileSpreadsheet size={16} /> Deliverables</h4>
+                  <p style={{ fontSize: '0.92rem', color: 'var(--text-primary)', lineHeight: 1.65 }}>
+                    {selectedProject.deliverables}
                   </p>
                 </div>
-
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: 1.55 }}>
+                  {selectedProject.scopeNote}
+                </p>
               </div>
-
             </div>
           </div>
         )}
-
       </div>
     </section>
   );
