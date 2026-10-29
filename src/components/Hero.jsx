@@ -42,7 +42,7 @@ export default function Hero() {
             fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 4vw, 3rem)',
             fontWeight: 800, lineHeight: 1.15, letterSpacing: '-0.02em'
           }}>
-            Hi, I'm <span className="gradient-text">Animasaun Damilare Aderinwale</span>
+            Hi, I'm <span className="gradient-text">Damilare</span>
           </h1>
 
           <p style={{
