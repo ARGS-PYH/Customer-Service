@@ -99,7 +99,7 @@ function App() {
                 </span>
               </div>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', maxWidth: '300px' }}>
-                Bridging rigorous analytical operations, customer support excellence, and technical systems adaptability.
+                Customer Success and Customer Operations, backed by banking service, risk awareness, and digital product experience.
               </p>
             </div>
 
@@ -151,7 +151,7 @@ function App() {
             gap: '1rem'
           }}>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-              &copy; {new Date().getFullYear()} Damilare Aderinwale Animasaun. All rights reserved.
+              &copy; {new Date().getFullYear()} Animasaun Damilare Aderinwale. All rights reserved.
             </p>
             
             <div style={{ display: 'flex', gap: '1rem' }}>
