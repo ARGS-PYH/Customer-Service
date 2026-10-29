@@ -61,8 +61,8 @@ export default function Hero() {
             <a href="#contact" className="btn btn-secondary">
               Contact Me <Mail size={18} />
             </a>
-            <a href="/Damilare_Animasaun_CV.pdf" download="Animasaun_Damilare_Aderinwale_CV.pdf" className="btn btn-secondary" style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>
-              Download CV <Download size={18} />
+            <a href="mailto:daanimasaun@gmail.com?subject=CV%20Request" className="btn btn-secondary" style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}>
+              Request CV <Download size={18} />
             </a>
           </div>
 
