@@ -1,0 +1,47 @@
+name: Temporary dependency audit
+on:
+  push:
+    branches:
+      - audit/dependency-check-2026-11-01
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Report dependency advisories
+        shell: bash
+        run: |
+          npm audit --json > audit.json || true
+          node <<'NODE'
+          const report = require('./audit.json');
+          console.log('AUDIT SUMMARY');
+          console.log(JSON.stringify(report.metadata?.vulnerabilities ?? {}, null, 2));
+          for (const [name, item] of Object.entries(report.vulnerabilities ?? {})) {
+            console.log('\\nPACKAGE: ' + name);
+            console.log('SEVERITY: ' + item.severity);
+            console.log('DIRECT: ' + item.isDirect);
+            console.log('RANGE: ' + item.range);
+            console.log('FIX: ' + JSON.stringify(item.fixAvailable));
+            console.log('AFFECTED NODES: ' + JSON.stringify(item.nodes));
+            console.log('ADVISORIES:');
+            for (const via of item.via ?? []) {
+              if (typeof via === 'string') console.log('- ' + via);
+              else console.log(JSON.stringify({
+                title: via.title,
+                url: via.url,
+                range: via.range,
+                severity: via.severity,
+                cwe: via.cwe,
+                cvss: via.cvss,
+                affected_versions: via.range
+              }));
+            }
+          }
+          NODE
