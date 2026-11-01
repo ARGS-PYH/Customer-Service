@@ -52,7 +52,7 @@ jobs:
       - name: Test standard audit fixes and production build
         shell: bash
         run: |
-          npm audit fix
+          npm audit fix || true
           npm audit --json > post-audit.json || true
           node -e "const r=require('./post-audit.json'); console.log('POST-FIX SUMMARY', JSON.stringify(r.metadata?.vulnerabilities ?? {})); console.log('REMAINING PACKAGES', Object.entries(r.vulnerabilities ?? {}).map(([n,v]) => ({name:n,severity:v.severity,direct:v.isDirect,fixAvailable:v.fixAvailable})))"
           npm run build
