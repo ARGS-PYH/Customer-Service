@@ -327,7 +327,7 @@ export default function Projects() {
         )}
       </div>
 
-      <style>{\`
+      <style>{`
         .cs-projects-section { padding: 3rem 0; background: var(--bg-secondary); }
         .cs-projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 1.5rem; align-items: stretch; }
         .cs-project-card { padding: 1.65rem; display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
@@ -449,7 +449,7 @@ export default function Projects() {
           .cs-controls { flex-wrap: wrap; }
           .cs-controls select { flex: 0 0 100%; max-width: none; }
         }
-      \`}</style>
+      `}</style>
     </section>
   );
 }
